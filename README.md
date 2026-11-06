@@ -1,8 +1,8 @@
-在线使用：[https://echo111-ppp.github.io/softcopy-hook-studio/](https://echo111-ppp.github.io/softcopy-hook-studio/)
-
 # 钩子工坊
 
 软文钩子分析、发布前风险检查和写作历史工作台。前端是纯静态网页，可以部署到 GitHub Pages；登录与跨设备同步使用 Supabase。
+
+在线使用：[https://echo111-ppp.github.io/softcopy-hook-studio/](https://echo111-ppp.github.io/softcopy-hook-studio/)
 
 ## 现在能做什么
 
@@ -37,6 +37,8 @@ python -m http.server 8080
 6. 注册账号并完成邮箱验证，然后登录。
 
 登录状态会自动保存在当前设备。正常情况下只在首次使用、主动退出、清除浏览器数据或登录过期时重新登录。
+
+本仓库的演示部署已经在 `storage.js` 中写入了项目对应的公开 Publishable key，所以打开线上版后可以直接登录。复刻项目时应替换为自己的项目 URL 和 Publishable key。
 
 只把 **Publishable key / anon public key** 填进网页。不要填写 secret key 或 `service_role` 密钥，也不要把它提交到 GitHub。
 

@@ -5,6 +5,10 @@ const DB_VERSION = 1;
 const STORE_NAME = "articles";
 const SUPABASE_MODULE_URL =
   "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
+const DEFAULT_CLOUD_CONFIG = Object.freeze({
+  url: "https://dbznlhinhoqmjfmrknuk.supabase.co",
+  anonKey: "sb_publishable_lqqOyPJmfvTBtwqO61wPYA_Z15nBJWc",
+});
 
 let dbPromise;
 let cloudClientPromise;
@@ -103,12 +107,14 @@ export const LocalStore = {
 export function getCloudConfig() {
   try {
     const raw = localStorage.getItem(CLOUD_CONFIG_KEY);
-    if (!raw) return null;
+    if (!raw) return { ...DEFAULT_CLOUD_CONFIG };
     const config = JSON.parse(raw);
-    if (!config?.url || !config?.anonKey) return null;
+    if (!config?.url || !config?.anonKey) {
+      return { ...DEFAULT_CLOUD_CONFIG };
+    }
     return config;
   } catch {
-    return null;
+    return { ...DEFAULT_CLOUD_CONFIG };
   }
 }
 

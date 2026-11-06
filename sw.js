@@ -1,4 +1,4 @@
-const CACHE_NAME = "softcopy-studio-v3";
+const CACHE_NAME = "softcopy-studio-v4";
 const APP_SHELL = [
   "./",
   "./index.html",
