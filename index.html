@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#182b2b" />
+    <meta
+      name="description"
+      content="软文钩子分析、风险检查和写作历史工作台。"
+    />
+    <title>钩子工坊｜软文写作工作台</title>
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#" data-view-link="home" aria-label="回到工作台">
+          <span class="brand-mark" aria-hidden="true">钩</span>
+          <span>
+            <strong>钩子工坊</strong>
+            <small>写之前找钩子，发之前先排雷</small>
+          </span>
+        </a>
+        <div class="topbar-actions">
+          <button class="storage-pill" id="storage-pill" type="button">
+            <span class="storage-dot"></span>
+            <span id="storage-label">本机保存</span>
+          </button>
+          <button class="icon-button" id="settings-button" type="button" aria-label="打开同步设置">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z" />
+              <path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-2.83 2.83-.06-.06a1.7 1.7 0 0 0-1.88-.34 1.7 1.7 0 0 0-1.03 1.56V21h-4v-.08A1.7 1.7 0 0 0 8.97 19.4a1.7 1.7 0 0 0-1.88.34l-.06.06-2.83-2.83.06-.06A1.7 1.7 0 0 0 4.6 15 1.7 1.7 0 0 0 3.08 14H3v-4h.08A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.34-1.88l-.06-.06 2.83-2.83.06.06A1.7 1.7 0 0 0 8.97 4.6 1.7 1.7 0 0 0 10 3.08V3h4v.08a1.7 1.7 0 0 0 1.03 1.52 1.7 1.7 0 0 0 1.88-.34l.06-.06 2.83 2.83-.06.06A1.7 1.7 0 0 0 19.4 9c.17.62.73 1.03 1.37 1.03H21v4h-.23c-.64 0-1.2.41-1.37 1Z" />
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <aside class="sidebar" aria-label="主导航">
+        <nav>
+          <button class="nav-item is-active" data-view-link="home" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z" />
+            </svg>
+            工作台
+          </button>
+          <button class="nav-item" data-view-link="hooks" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="11" cy="11" r="7" />
+              <path d="m20 20-4-4M8 11h6M11 8v6" />
+            </svg>
+            拆钩子
+          </button>
+          <button class="nav-item" data-view-link="review" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 4h16v16H4zM8 8h8M8 12h8M8 16h5" />
+            </svg>
+            查文案
+          </button>
+          <button class="nav-item" data-view-link="create" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L8 18l-4 1 1-4Z" />
+            </svg>
+            写新稿
+          </button>
+          <button class="nav-item" data-view-link="library" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3Z" />
+              <path d="M9 8h7M9 12h7M9 16h4" />
+            </svg>
+            我的软文
+          </button>
+        </nav>
+        <div class="sidebar-note">
+          <span>本地优先</span>
+          未登录也能完整使用。云端开启后，手机和电脑共用同一账号。
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <section class="view is-active" data-view="home">
+          <div class="hero">
+            <div class="hero-copy">
+              <span class="eyebrow">软文写作工作台</span>
+              <h1>先让读者停下来，<br />再让她相信你。</h1>
+              <p>
+                从竞品软文拆钩子，检查自己的功效风险和绝对化表达，再把每一次修改按日期留下来。
+              </p>
+              <div class="hero-actions">
+                <button class="button button-primary" data-view-link="hooks" type="button">拆一篇竞品</button>
+                <button class="button button-secondary" data-view-link="review" type="button">检查我的稿子</button>
+              </div>
+            </div>
+            <div class="hook-board" aria-hidden="true">
+              <div class="hook-card hook-card-a">
+                <small>场景痛点</small>
+                <strong>换季那阵子，我家猫一天打十几个喷嚏</strong>
+              </div>
+              <div class="hook-card hook-card-b">
+                <small>反差钩子</small>
+                <strong>后来才知道，问题不在我换了几瓶</strong>
+              </div>
+              <div class="hook-card hook-card-c">
+                <small>劝告口吻</small>
+                <strong>玻璃胃家长，先别急着跟风买</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="metric-grid" id="home-metrics">
+            <article class="metric-card">
+              <span>已保存</span>
+              <strong>0</strong>
+              <small>篇软文</small>
+            </article>
+            <article class="metric-card">
+              <span>本周完成</span>
+              <strong>0</strong>
+              <small>篇</small>
+            </article>
+            <article class="metric-card">
+              <span>待处理风险</span>
+              <strong>0</strong>
+              <small>处</small>
+            </article>
+          </div>
+
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">开始工作</span>
+              <h2>今天想先做哪一步？</h2>
+            </div>
+          </div>
+          <div class="quick-grid">
+            <button class="quick-card" data-view-link="hooks" type="button">
+              <span class="quick-index">01</span>
+              <strong>拆钩子</strong>
+              <p>粘贴竞品软文，标出场景、反差、踩坑和身份标签。</p>
+              <span class="text-link">开始拆解 →</span>
+            </button>
+            <button class="quick-card" data-view-link="review" type="button">
+              <span class="quick-index">02</span>
+              <strong>查文案</strong>
+              <p>检查医疗功效、拉踩、绝对化和缺少就医边界的问题。</p>
+              <span class="text-link">粘贴检查 →</span>
+            </button>
+            <button class="quick-card" data-view-link="create" type="button">
+              <span class="quick-index">03</span>
+              <strong>写新稿</strong>
+              <p>边写边看钩子与风险，写完直接保存到自己的软文库。</p>
+              <span class="text-link">新建软文 →</span>
+            </button>
+          </div>
+
+          <div class="section-heading compact-heading">
+            <div>
+              <span class="eyebrow">最近编辑</span>
+              <h2>继续上次的稿子</h2>
+            </div>
+            <button class="text-button" data-view-link="library" type="button">查看全部</button>
+          </div>
+          <div class="recent-list" id="recent-list">
+            <div class="empty-state">
+              <strong>还没有保存过软文</strong>
+              <p>写好的稿子会按日期出现在这里。</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="view" data-view="hooks">
+          <div class="page-heading">
+            <div>
+              <span class="eyebrow">钩子雷达</span>
+              <h1>拆一篇别人的软文</h1>
+              <p>识别它靠什么让人停下来，再换用自己的事实和场景。</p>
+            </div>
+            <button class="button button-secondary" id="load-hook-sample" type="button">载入示例</button>
+          </div>
+          <div class="work-grid">
+            <section class="panel input-panel">
+              <label class="field-label" for="hook-input">粘贴竞品文案或评论素材</label>
+              <textarea
+                id="hook-input"
+                class="large-textarea"
+                placeholder="把标题和正文一起粘贴进来，分析会更准确……"
+              ></textarea>
+              <div class="panel-actions">
+                <span class="helper-text">原句只作研究参考，正式成稿请重组表达。</span>
+                <button class="button button-primary" id="analyze-hooks-button" type="button">开始拆解</button>
+              </div>
+            </section>
+            <section class="panel result-panel" id="hook-results">
+              <div class="empty-result">
+                <span class="result-symbol">?</span>
+                <strong>钩子分析会出现在这里</strong>
+                <p>会标出钩子类型、出现位置，以及开头还能怎么加强。</p>
+              </div>
+            </section>
+          </div>
+          <section class="panel hook-builder-panel">
+            <div class="builder-heading">
+              <div>
+                <span class="eyebrow">钩子组合器</span>
+                <h2>把真实素材组合成开头</h2>
+                <p>先填事实，再生标题。生成结果只是起点，交稿前仍要改写成自己的话。</p>
+              </div>
+            </div>
+            <div class="builder-grid">
+              <label class="field">
+                <span>写给谁</span>
+                <input id="builder-audience" type="text" placeholder="玻璃胃猫家长" />
+              </label>
+              <label class="field">
+                <span>具体痛点</span>
+                <input id="builder-pain" type="text" placeholder="猫换季总打喷嚏、软便反复" />
+              </label>
+              <label class="field">
+                <span>原来的做法</span>
+                <input id="builder-action" type="text" placeholder="跟风买高含量乳铁蛋白" />
+              </label>
+              <label class="field">
+                <span>产品</span>
+                <input id="builder-product" type="text" placeholder="艾尼欧乳铁蛋白" />
+              </label>
+              <label class="field builder-evidence">
+                <span>真实依据</span>
+                <input id="builder-evidence" type="text" placeholder="0乳糖、250mg、适口性" />
+              </label>
+              <button class="button button-primary builder-submit" id="generate-hooks-button" type="button">生成 6 个开头</button>
+            </div>
+            <div class="generated-hooks" id="generated-hooks"></div>
+          </section>
+        </section>
+
+        <section class="view" data-view="review">
+          <div class="page-heading">
+            <div>
+              <span class="eyebrow">风险扫描</span>
+              <h1>交稿前先查一遍</h1>
+              <p>规则会抓明显功效、拉踩、绝对化和结构问题，事实仍要自己核对。</p>
+            </div>
+            <button class="button button-secondary" id="load-review-sample" type="button">载入示例</button>
+          </div>
+          <div class="work-grid review-grid">
+            <section class="panel input-panel">
+              <label class="field-label" for="review-input">粘贴你的完整文案</label>
+              <textarea
+                id="review-input"
+                class="large-textarea review-textarea"
+                placeholder="标题和正文都粘贴进来……"
+              ></textarea>
+              <div class="panel-actions">
+                <button class="button button-secondary" id="send-to-editor" type="button">放进编辑器</button>
+                <button class="button button-primary" id="analyze-review-button" type="button">检查文案</button>
+              </div>
+            </section>
+            <section class="panel result-panel" id="review-results">
+              <div class="empty-result">
+                <span class="result-symbol">✓</span>
+                <strong>风险提示会出现在这里</strong>
+                <p>按高、中、低风险分组，并给出可执行的修改方向。</p>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section class="view" data-view="create">
+          <div class="page-heading">
+            <div>
+              <span class="eyebrow">新建软文</span>
+              <h1>边写边检查</h1>
+              <p>系统会在本机保留草稿；保存后才会进入“我的软文”。</p>
+            </div>
+            <button class="button button-secondary" id="new-editor-button" type="button">新建空白稿</button>
+          </div>
+          <div class="editor-grid">
+            <section class="panel editor-panel">
+              <input id="editor-id" type="hidden" />
+              <div class="field-row">
+                <label class="field">
+                  <span>标题</span>
+                  <input id="editor-title" type="text" placeholder="先写一个让人想停下来的标题" />
+                </label>
+                <label class="field field-small">
+                  <span>产品 / 品牌</span>
+                  <input id="editor-product" type="text" placeholder="例如：艾尼欧乳铁蛋白" />
+                </label>
+              </div>
+              <div class="field-row">
+                <label class="field field-small">
+                  <span>状态</span>
+                  <select id="editor-status">
+                    <option>草稿</option>
+                    <option>待修改</option>
+                    <option>已提交</option>
+                    <option>已发布</option>
+                  </select>
+                </label>
+                <label class="field">
+                  <span>日期</span>
+                  <input id="editor-date" type="date" />
+                </label>
+              </div>
+              <label class="field">
+                <span>正文</span>
+                <textarea
+                  id="editor-body"
+                  class="editor-textarea"
+                  placeholder="从一个小场景开始，不要先写产品宣传语……"
+                ></textarea>
+              </label>
+              <label class="field">
+                <span>竞品素材 / 参考原句</span>
+                <textarea
+                  id="editor-source-notes"
+                  class="small-textarea"
+                  placeholder="只作为参考，成稿时尽量重组成自己的表达。"
+                ></textarea>
+              </label>
+              <label class="field">
+                <span>我的复盘</span>
+                <textarea
+                  id="editor-notes"
+                  class="small-textarea"
+                  placeholder="例如：带教说开头太官方，下次先写场景。"
+                ></textarea>
+              </label>
+              <div class="editor-actions">
+                <button class="button button-secondary" id="check-editor-button" type="button">检查当前稿</button>
+                <button class="button button-ghost" id="save-version-button" type="button">保存为新版本</button>
+                <button class="button button-primary" id="save-editor-button" type="button">保存到我的软文</button>
+              </div>
+            </section>
+            <aside class="panel live-panel" id="editor-analysis">
+              <div class="empty-result compact-empty">
+                <span class="result-symbol">↗</span>
+                <strong>边写边看</strong>
+                <p>点“检查当前稿”后，这里会显示钩子、风险和长度建议。</p>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="view" data-view="library">
+          <div class="page-heading">
+            <div>
+              <span class="eyebrow">软文台账</span>
+              <h1>我的软文</h1>
+              <p id="library-subtitle">所有保存过的稿件都会按修改日期排列。</p>
+            </div>
+            <div class="library-actions">
+              <button class="button button-secondary" id="import-button" type="button">导入备份</button>
+              <button class="button button-secondary" id="export-button" type="button">导出备份</button>
+              <button class="button button-primary" id="library-new-button" type="button">新建软文</button>
+            </div>
+          </div>
+          <div class="library-toolbar">
+            <label class="search-box">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="11" cy="11" r="7" />
+                <path d="m20 20-4-4" />
+              </svg>
+              <input id="library-search" type="search" placeholder="搜索标题、产品或正文" />
+            </label>
+            <select id="library-status-filter">
+              <option value="">全部状态</option>
+              <option>草稿</option>
+              <option>待修改</option>
+              <option>已提交</option>
+              <option>已发布</option>
+            </select>
+          </div>
+          <div class="article-grid" id="article-library">
+            <div class="empty-state">
+              <strong>还没有软文</strong>
+              <p>保存第一篇后，就可以按日期、产品和状态查找。</p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <nav class="mobile-nav" aria-label="移动端导航">
+      <button class="is-active" data-view-link="home" type="button">工作台</button>
+      <button data-view-link="hooks" type="button">拆钩子</button>
+      <button data-view-link="review" type="button">查文案</button>
+      <button data-view-link="create" type="button">写新稿</button>
+      <button data-view-link="library" type="button">我的软文</button>
+    </nav>
+
+    <dialog id="settings-dialog" class="settings-dialog">
+      <form method="dialog" class="dialog-shell">
+        <div class="dialog-header">
+          <div>
+            <span class="eyebrow">保存与同步</span>
+            <h2>设置</h2>
+          </div>
+          <button class="icon-button dialog-close" value="close" aria-label="关闭设置">×</button>
+        </div>
+        <div class="settings-mode-grid">
+          <article class="mode-card" id="local-mode-card">
+            <span class="mode-badge">当前可用</span>
+            <strong>本机保存</strong>
+            <p>不用登录，数据保存在当前浏览器。换设备不会同步。</p>
+          </article>
+          <article class="mode-card" id="cloud-mode-card">
+            <span class="mode-badge">跨设备</span>
+            <strong>云端同步</strong>
+            <p>登录后手机和电脑共享软文，数据权限只开放给本人。</p>
+          </article>
+        </div>
+        <section class="settings-section">
+          <h3>Supabase 连接</h3>
+          <p class="helper-text">
+            这里只填写 Project URL 和浏览器可用的 Publishable key（旧版叫 anon public key），不要填写 secret 或 service_role key。
+          </p>
+          <label class="field">
+            <span>Project URL</span>
+            <input id="supabase-url" type="url" placeholder="https://xxxx.supabase.co" />
+          </label>
+          <label class="field">
+            <span>Publishable key / anon public key</span>
+            <input id="supabase-key" type="password" placeholder="sb_publishable_... 或 eyJ..." />
+          </label>
+          <div class="settings-actions">
+            <button class="button button-secondary" id="test-cloud-button" type="button">测试连接</button>
+            <button class="button button-primary" id="save-cloud-button" type="button">保存配置</button>
+          </div>
+        </section>
+        <section class="settings-section">
+          <h3>账号</h3>
+          <div id="auth-signed-out">
+            <div class="field-row">
+              <label class="field">
+                <span>邮箱</span>
+                <input id="auth-email" type="email" autocomplete="email" placeholder="you@example.com" />
+              </label>
+              <label class="field">
+                <span>密码</span>
+                <input id="auth-password" type="password" autocomplete="current-password" placeholder="至少 6 位" />
+              </label>
+            </div>
+            <div class="settings-actions">
+              <button class="button button-secondary" id="sign-up-button" type="button">注册</button>
+              <button class="button button-primary" id="sign-in-button" type="button">登录</button>
+            </div>
+          </div>
+          <div id="auth-signed-in" hidden>
+            <p class="signed-in-line">当前账号：<strong id="signed-in-email"></strong></p>
+            <button class="button button-secondary" id="sign-out-button" type="button">退出登录</button>
+          </div>
+        </section>
+        <section class="settings-section privacy-section">
+          <h3>数据边界</h3>
+          <p>
+            开源的是工具代码，不是你的软文数据。云端表启用了行级权限，只允许当前账号读写自己的记录。
+            不要把公司尚未公开的产品资料和内部要求保存到个人公开环境。
+          </p>
+        </section>
+      </form>
+    </dialog>
+
+    <input id="import-file-input" type="file" accept="application/json,.json" hidden />
+    <div class="toast-region" id="toast-region" aria-live="polite"></div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
+

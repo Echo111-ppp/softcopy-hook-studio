@@ -1,0 +1,20 @@
+{
+  "name": "钩子工坊｜软文写作工作台",
+  "short_name": "钩子工坊",
+  "description": "软文钩子分析、风险检查和写作历史工作台。",
+  "lang": "zh-CN",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f1e9",
+  "theme_color": "#182b2b",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
+
