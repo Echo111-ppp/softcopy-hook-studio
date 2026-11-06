@@ -1,3 +1,5 @@
+在线使用：[https://echo111-ppp.github.io/softcopy-hook-studio/](https://echo111-ppp.github.io/softcopy-hook-studio/)
+
 # 钩子工坊
 
 软文钩子分析、发布前风险检查和写作历史工作台。前端是纯静态网页，可以部署到 GitHub Pages；登录与跨设备同步使用 Supabase。
